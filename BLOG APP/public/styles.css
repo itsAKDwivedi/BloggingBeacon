@@ -1,0 +1,279 @@
+/* Color Pallete
+    #042940
+    #005C53
+    #9FC131
+    #DBF227
+    #D6D58E */
+
+
+/* Font Styles */
+
+.quicksand-heading {
+    font-family: "Quicksand", sans-serif;
+    color: #D6D58E;
+    font-size: 4em;
+    margin: 0;
+    padding: 1.8%;
+  }
+  
+.macondo-regular {
+    font-family: "Macondo", cursive;
+    font-style: normal;
+}
+  
+.cuprum-text {
+    color: #042940;
+    font-family: "Cuprum", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* Main format */
+
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(#042940, #005C53, #D6D58E);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+a{
+    text-decoration: none;
+}
+
+.inline{
+    display: inline;
+}
+
+.block{
+    display: block;
+}
+
+.centered{
+    text-align: center;
+}
+
+.bold{
+    font-weight: 1000;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.highlight{
+    background-color: #9FC131;
+    padding: 0.4%;
+    color: #042940;
+    border-radius: 5px;
+}
+
+.typewriter h1{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: 
+      typing 4s steps(100, end)
+  }
+
+.heading-img{
+    height: 1.5em;
+    margin: 0;
+    margin-top: -10px;
+}
+
+.title{
+    color: #9FC131;
+    font-size: 2em;
+    text-align: center;
+    margin: 20px;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Footer */
+
+.footer-container{
+    bottom: 0;
+    min-height: 20px;
+    width: 100%;
+    max-height: fit-content;
+}
+
+/* Function Keys */
+
+.function-keys {
+    background-color: #042940;
+    text-decoration: none;
+    color: #D6D58E; 
+    transition: color 0.3s ease; 
+    margin-left: 20px;
+    font-size: 1.2em;
+    outline: 1px solid #042940;
+    padding: 5px;
+}
+
+.function-keys:hover {
+    background-color: #DBF227;
+    color: #042940; 
+    transition: background-color 0.3s ease;
+}
+
+.avatar {
+	box-sizing: border-box;
+	overflow: hidden;
+	transform: translatey(0px);
+	animation: float 1s ease-in-out infinite;
+} 
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 10px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 20px 10px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 10px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+/* Form Design */
+
+.form-element {
+    background-color: #042940 !important;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid #042940;
+    border-radius: 5px;
+    transition: box-shadow 0.6s ease; 
+}
+
+.form-element:hover, .display:hover {
+    box-shadow: 5px 10px 40px #042940;
+}
+
+.form-internal:hover {
+    transform: translateY(-1px); 
+    transition: transform 0.3s ease;
+}
+
+.form-internal{
+    background-color: #D6D58E !important;
+    color: #042940 !important;
+    text-decoration: none;
+    width: 100%;
+    margin: 2px;
+}
+
+.form-internal{
+    outline: none;
+    background-color: inherit;
+}
+
+.form-internal:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 100px #D6D58E inset;
+    -webkit-text-fill-color: #042940;
+}
+
+.form-internal:-webkit-autofill:hover {
+    -webkit-box-shadow: 0 0 0px 100px #D6D58E inset;
+}
+
+.form-internal:-webkit-autofill:focus {
+    caret-color: #042940;
+}
+
+.form-button {
+    display: inline-block;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #005C53;
+    color: #DBF227;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #9FC131 !important; /* Darker shade of green on hover */
+    transform: translateY(-3px); /* Move the button slightly upwards on hover */
+    color: #042940 !important;
+}
+
+.form-internal:focus {
+    outline: none;
+}
+
+/* Blogs list */
+
+
+.list-tile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blogs-list-items{
+    margin: 2px;
+    min-width: 40vw;
+    background-color: #D6D58E;
+    list-style: none;
+    padding: 10px;
+    font-family: "Cuprum", sans-serif;
+    font-size: 1.2em;
+    color: #042940
+}
+
+.blogs-list-items:hover {
+    background-color: #9FC131;
+    transform: translateY(-1px); 
+    transition: transform 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.delete{
+    width: min-content;
+}
+
+/* Content */
+.display{
+    margin: auto;
+    max-width: 700px;
+    background: radial-gradient(#DBF227, #9FC131, #D6D58E);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+
+pre {
+    white-space: pre-wrap;
+    text-align: justify;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 650px) {
+    .quicksand-heading{
+        font-size: 2.5em;
+    } 
+
+    .function-keys{
+        margin-top: 200px;
+        font-size: 1.5em;
+    }
+}
