@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+
+<a href="/" class="function-keys cuprum-text"> Homepage</a>
+
+<div class="display">
+    <h2><%= blog.title %> </h2>
+    <p>by <%= blog.author %></p>
+    <p><%= blog.creationDate %></p>
+    <pre> <%= blog.content %> </pre>
+    <br><br><br>
+    <p class=".cuprum-text centered">⭐ ❤️Thanks for reading❤️ ⭐</p>
+</div>
+
+<%- include("partials/footer.ejs") %>

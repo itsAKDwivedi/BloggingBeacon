@@ -1,0 +1,22 @@
+<%- include("partials/header.ejs") %>
+
+<a href="/create" class="function-keys cuprum-text avatar"> Write a Blog✍️</a>
+
+<% if(blogsArray.length===0){ %>
+    <h2 class="macondo-regular title">Oops! No <span class="highlight">Blog here</span><span class="block quicksand-heading centered">🫣</span></h2>
+<% } else { %>
+<h2 class="macondo-regular title">Check Out these awesome <span class="highlight">Blogs:</span>❤️</h2>
+
+    <ul class="list-group list-group-flush">
+        <% for(let i=0; i<blogsArray.length; i++){ %>
+            
+            <div class="list-tile">
+                <a href="/viewBlog?index=<%= i %>"><li class="blogs-list-items"><span class="bold"><%= blogsArray[i].title %></span> by <span class="italic highlight"><%= blogsArray[i].author %></span></li></a>
+                <div class="delete"><a href="/deleted?index=<%= i %>"><i class="fa-solid fa-trash"></i></a></div>
+            </div>
+            
+        <% } %>
+    </ul>
+<% } %>
+
+<%- include("partials/footer.ejs") %>
