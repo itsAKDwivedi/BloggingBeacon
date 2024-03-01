@@ -12,7 +12,7 @@
             
             <div class="list-tile">
                 <a href="/viewBlog?index=<%= i %>" title="<%= blogsArray[i].intro %>"><li class="blogs-list-items"><span class="bold"><%= blogsArray[i].title %></span> by <span class="italic highlight"><%= blogsArray[i].author %></span></li></a>
-                <div class="delete"><a href="/deleted?index=<%= i %>"><i class="fa-solid fa-trash"></i></a></div>
+                <div class="delete"><a href="/deleted?index=<%= i %>"><i class="fa-solid fa-trash delete"></i></a></div>
             </div>
             
         <% } %>
