@@ -235,7 +235,7 @@ a{
     padding: 10px;
     font-family: "Cuprum", sans-serif;
     font-size: 1.2em;
-    color: #042940
+    color: #042940;
 }
 
 .blogs-list-items:hover {
@@ -247,6 +247,11 @@ a{
 
 .delete{
     width: min-content;
+    color: #9FC131;
+}
+
+.delete:hover{
+    color: #042940;
 }
 
 /* Content */
