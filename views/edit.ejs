@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+
+<div class="form-element">
+<form action="/edit?index=<%= idx %>" method="post">
+    <input class="form-element form-internal" type="text" name="blogAuthor" placeholder="Enter Your Name here" value="<%= blogsArray.author %>" required>
+    <input class="form-element form-internal" type="text" name="blogTitle" placeholder="Enter Blog Heading here" value="<%= blogsArray.title %>" required> 
+    <input class="form-element form-internal" type="text" name="blogIntro" placeholder="Enter Intro for Readers" value="<%= blogsArray.intro %>" required> 
+    <textarea class="form-element form-internal" name="blogContent" cols="30" rows="10" placeholder="Enter Your Blog here...✍️" required><%= blogsArray.content %></textarea>
+    <button class="form-element form-internal form-button" type="submit" name="submit">Update</button>
+</form>
+<a href="/"><button class="form-element form-internal form-button">Cancel</button></a>
+</div>
+
+<%- include("partials/footer.ejs") %>
