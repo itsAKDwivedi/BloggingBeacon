@@ -18,6 +18,29 @@ app.get("/create", (req, res)=>{
     res.render("create.ejs");
 });
 
+app.get('/viewBlog', (req, res)=>{
+    let idx = req.query.index;
+    res.render("content.ejs", {
+        blog: blogsArray[idx]
+    });
+});
+
+app.get('/deleted', (req, res)=>{
+    let idx = req.query.index;
+    blogsArray.splice(idx, 1);
+    res.render("index.ejs", {
+        blogsArray: blogsArray
+    });
+});
+
+app.get('/edit', (req, res)=>{
+    let idx = req.query.index;
+    res.render("edit.ejs", {
+        blogsArray: blogsArray[idx],
+        idx: idx
+    });
+})
+
 app.post('/', (req, res)=>{
     blogsArray.push({
         author: req.body['blogAuthor'],
@@ -31,16 +54,16 @@ app.post('/', (req, res)=>{
     });
 });
 
-app.get('/viewBlog', (req, res)=>{
+app.post('/edit', (req, res)=>{
     let idx = req.query.index;
-    res.render("content.ejs", {
-        blog: blogsArray[idx]
-    });
-});
+    blogsArray[idx] = {
+        author: req.body['blogAuthor'],
+        title: req.body['blogTitle'],
+        intro: req.body['blogIntro'],
+        content: req.body['blogContent'],
+        creationDate: new Date().toUTCString().slice(5, 16)
+    }
 
-app.get('/deleted', (req, res)=>{
-    let idx = req.query.index;
-    blogsArray.splice(idx, 1);
     res.render("index.ejs", {
         blogsArray: blogsArray
     });
